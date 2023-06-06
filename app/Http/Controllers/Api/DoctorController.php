@@ -30,4 +30,10 @@ class DoctorController extends Controller
 
         return response()->json($doctor);
     }
+
+    public function getdoctor(Request $request)
+    {
+        $data = Doctor::where('speciality_id', $request->id) ->get();
+        return Api::setResponse('doctor', $data);
+    }
 }

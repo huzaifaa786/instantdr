@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 class Doctor extends Authenticatable
 {
     use HasFactory, UserMethods;
-    protected $fillable = ['name', 'email', 'password', 'gender', 'dob', 'phone', 'address', 'qualification', 'image', 'start_time', 'end_time', 'days', 'api_token'];
+    protected $fillable = ['speciality_id','name', 'email', 'password', 'gender', 'dob', 'phone', 'address', 'qualification', 'image', 'start_time', 'end_time', 'days', 'api_token'];
     protected $casts = [
         'days' => 'array',
     ];
@@ -23,5 +23,9 @@ class Doctor extends Authenticatable
     public function getImageAttribute($value)
     {
         return asset($value);
+    }
+    public function speciality()
+    {
+        return $this->belongsTo(Speciality::class);
     }
 }

@@ -10,7 +10,7 @@
                         <div class="mb-3 ">
                             <label for="speciality" class="col-md-2 col-form-label">Speciality</label>
                             <div class="col-md-12">
-                                <select class="form-control form-select-lg mb-3 rounded" name="category_id"
+                                <select class="form-control form-select-lg mb-3 rounded" name="speciality_id"
                                     aria-label=".form-select-lg example">
                                     <option value="" disabled selected>Select speciality</option>
                                     <tbody>

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('speciality_id');
+            $table->foreign('speciality_id')->references('id')->on('specialities')->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->string('password');
