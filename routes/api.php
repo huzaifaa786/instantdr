@@ -27,3 +27,4 @@ Route::any('doctor/get', [DoctorController::class, 'getdoctor']);
 Route::any('doctor/detail', [DoctorController::class, 'doctorShow']);
 Route::any('payment/intent', [PaymentController::class, 'createPaymentIntent']);
 Route::any('user/get', [UserController::class, 'userget']);
+Route::any('user/passwordchange', [UserController::class, 'changeuserpassword']);
