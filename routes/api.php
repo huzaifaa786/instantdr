@@ -21,4 +21,5 @@ Route::any('patient/login', [AuthController::class, 'patientLogin']);
 Route::any('doctorlogin', [AuthController::class, 'doctorLogin']);
 Route::any('doctorall', [DoctorController::class, 'doctorAll']);
 Route::any('doctorspeciality', [DoctorController::class, 'doctorSpeciality']);
+Route::any('doctor/get', [DoctorController::class, 'getdoctor']);
 Route::any('doctor/detail', [DoctorController::class, 'doctorShow']);
