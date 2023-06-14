@@ -6,6 +6,7 @@ use App\Helpers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Stripe\StripeClient;
+
 class PaymentController extends Controller
 {
     public function createPaymentIntent(Request $request){
