@@ -16,7 +16,7 @@
                 <div class="row w-100 mx-0">
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                            <div class="brand-logo">
+                            <div class="brand-logo-m-9">
                                 <img src="{{ asset('admin/asset/images/logo.svg') }}" alt="logo">
                             </div>
                             <h4>Welcome back!</h4>
