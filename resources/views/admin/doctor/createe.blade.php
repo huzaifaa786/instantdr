@@ -34,6 +34,10 @@
                             <input type="password" name="password" class="form-control" id="password" required>
                         </div>
                         <div class="mb-3">
+                            <label for="fee" class="form-label">DoctorFee:</label>
+                            <input type="number" name="fee" class="form-control" id="fee" required>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Gender:</label>
                             <div class="form-check">
                                 <input class="form-check-input ml-1" type="radio" name="gender" id="maleGender"

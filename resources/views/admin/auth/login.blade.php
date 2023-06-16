@@ -17,11 +17,12 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                             <div class="brand-logo">
-                                <img src="{{ asset('admin/asset/images/logo.svg') }}" alt="logo">
+                                <span style="color: #F2125E;font-weight: bold;font-size: 24px;">InstantDr.</span>
                             </div>
                             <h4>Welcome back!</h4>
                             <h6 class="font-weight-light">Sign in to continue.</h6>
-                            <form class="pt-3" method="post" action="{{ route('admin.auth.login') }}" enctype="multipart/form-data">
+                            <form class="pt-3" method="post" action="{{ route('admin.auth.login') }}"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
@@ -42,8 +43,9 @@
 
                                 </div>
                                 <div class="mt-3">
-                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-                                        href="{{route('admin.hospital.create')}}">SIGN IN</button>
+                                    <button type="submit"
+                                        class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                                        href="{{ route('admin.hospital.create') }}">SIGN IN</button>
                                 </div>
 
 
