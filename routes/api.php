@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // routes/api.php
+
+Route::any('register', [AuthController::class, 'patientRegister']);
+Route::any('patient/login', [AuthController::class, 'patientLogin']);
 Route::group(['middleware' => 'auth:doctor_api'], function () {
     Route::any('doctorall', [DoctorController::class, 'doctorAll']);
     Route::any('doctorspeciality', [DoctorController::class, 'doctorSpeciality']);
@@ -26,8 +29,6 @@ Route::group(['middleware' => 'auth:doctor_api'], function () {
     Route::any('doctorlogin', [AuthController::class, 'doctorLogin']);
 });
 Route::group(['middleware' => 'auth:web'], function () {
-    Route::any('register', [AuthController::class, 'patientRegister']);
-    Route::any('patient/login', [AuthController::class, 'patientLogin']);
 });
 
 Route::any('payment/intent', [PaymentController::class, 'createPaymentIntent']);
