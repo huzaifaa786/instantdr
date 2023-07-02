@@ -25,7 +25,7 @@ class PaymentController extends Controller
             'customer' => $customer->id,
             'confirmation_method' => 'manual',
         ]);
-        $paymentIntent = json_encode(
+        $paymentIntent =
             [
               'paymentIntent' => $intent->client_secret,
               'ephemeralKey' => $ephemeralKey->secret,
@@ -33,7 +33,7 @@ class PaymentController extends Controller
               'intent' => $intent,
               'publishableKey' => 'pk_test_51JvIZ1Ey3DjpASZjPAzcOwqhblOq2hbchp6i56BsjapvhWcooQXqh33XwCrKiULfAe7NKFwKUhn2nqURE7VZcXXf00wMDzp4YN'
             ]
-          );
+          ;
           return Api::setResponse('intent',$paymentIntent);
     }
 }
