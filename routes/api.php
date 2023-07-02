@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DoctorController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
@@ -34,3 +35,4 @@ Route::group(['middleware' => 'auth:web'], function () {
 Route::any('payment/intent', [PaymentController::class, 'createPaymentIntent']);
 Route::any('user/get', [UserController::class, 'userget']);
 Route::any('user/passwordchange', [UserController::class, 'changeuserpassword']);
+Route::any('order/store', [OrderController::class, 'store']);

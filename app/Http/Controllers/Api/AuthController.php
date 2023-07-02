@@ -29,6 +29,7 @@ class AuthController extends Controller
             return Api::setError('Invalid credentials');
         }
     }
+
     public function patientRegister(Request $request)
     {
 
