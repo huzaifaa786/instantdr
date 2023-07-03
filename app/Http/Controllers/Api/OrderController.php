@@ -11,8 +11,14 @@ class OrderController extends Controller
 {
     public function store(Request $request)
     {
-        $data =Order::create($request->all());
+
+        $data = Order::create($request->all());
         return Api::setResponse('order', $data);
     }
-    
+    public function orderget(Request $request)
+    {
+
+        $data = Order::where('user-id', $request->id)->get();
+        return Api::setResponse('order', $data);
+    }
 }
