@@ -19,6 +19,7 @@ class Order extends Model
     }
     public function speciality()
     {
+        
         return $this->doctor->speciality->name;
     }
 }
