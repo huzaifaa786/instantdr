@@ -19,6 +19,9 @@
                         <a class="nav-link" href="{{ route('admin/city') }}">Create
                             City</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('all/city') }}">All Citys</a>
+                    </li>
                 
                 </ul>
             </div>

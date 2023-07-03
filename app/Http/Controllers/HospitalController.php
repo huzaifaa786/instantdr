@@ -44,4 +44,25 @@ class HospitalController extends Controller
         Ambulance::create($request->all());
         return redirect()->back();
     }
+    public function cityupdate(Request $request)
+
+    {
+        $hospital = city::find($request->id);
+        $hospital->update($request->all());
+        return redirect()->back()->with('cong', 'city edit successfully');
+    }
+
+    public function getall()
+    {
+        $hospitals = city::all();
+        return view('admin.city.allcity', ['citys' => $hospitals,]);
+    }
+    public function deletecity($id)
+    {
+        $hospital = city::find($id);
+        $hospital->delete();
+
+        // Redirect the user back to the categories list with a success message
+        return redirect()->back()->with('success', 'product deleted successfully');
+    }
 }

@@ -48,3 +48,6 @@ Route::get('admin/allspeciality', [SpecialityController::class, 'index'])->name(
 Route::post('speciality/edit', [SpecialityController::class, 'update'])->name('edit/speciality');
 Route::get('speciality/{id}', [SpecialityController::class, 'destroy'])->name('destroy_speciality');
 Route::get('admin/doctor/create', [SpecialityController::class, 'show'])->name('admin.doctor.createe');
+Route::post('edit/city', [HospitalController::class, 'cityupdate'])->name('edit/city');
+Route::get('all/city', [HospitalController::class, 'getall'])->name('all/city');
+Route::get('delete/city/{id}', [HospitalController::class, 'deletecity'])->name('delete/city');
