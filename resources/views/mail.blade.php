@@ -21,7 +21,7 @@
         <tr>
             <td style="padding: 20px;">
                 <p style="margin-bottom: 20px;">Dear {{ $mailData['doctor_name'] }},</p>
-                <p style="margin-bottom: 20px;">Customer Name: {{$mailData['patientname']}}</p>
+                <p style="margin-bottom: 20px;">Customer Name: {{$mailData['customer_name']}}</p>
                 <p style="margin-bottom: 20px;">Appoinment time: {{$mailData['time']}}</p>
                 <p style="margin-bottom: 20px;">Appoinment date: {{$mailData['date']}}</p>
                 
