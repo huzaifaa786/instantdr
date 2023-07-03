@@ -17,13 +17,13 @@ class OrderController extends Controller
     {
 
         $order = Order::create($request->all());
-
+        $time =    $time = Carbon::parse($order->time)->format('H:i:s');
         $mailData = [
             'title' => 'New Appointment Booked',
             'doctor_name' => $order->doctor->name,
             'customer_name' => $order->patientname,
             'date' => Carbon::parse($order->date)->toDateString(),
-            'time' => Carbon::parse($order->time)->format('H:i:s'),
+            'time' => $time,
         ];
 
         Mail::to($order->doctor->email)->send(new OrderMail($mailData));
@@ -38,7 +38,7 @@ class OrderController extends Controller
 
     public function doctororder(Request $request)
     {
-        $doctor=Doctor::where('api_token', $request->api_token)->first();
+        $doctor = Doctor::where('api_token', $request->api_token)->first();
 
         $data = Order::where('doctor_id', $doctor->id)->with('hospital')->with('doctor')->with('doctor.speciality')->get();
         return Api::setResponse('order', $data);
