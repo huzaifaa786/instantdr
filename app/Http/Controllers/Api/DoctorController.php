@@ -34,7 +34,7 @@ class DoctorController extends Controller
 
     public function getdoctor(Request $request)
     {
-        $data = Doctor::where('speciality_id', $request->id)->get();
+        $data = Doctor::where('speciality_id', $request->id)->where('city_id', $request->city_id)->get();
         return Api::setResponse('doctor', $data);
     }
     public function cityAll()
