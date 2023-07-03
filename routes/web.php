@@ -40,6 +40,7 @@ Route::get('doctor/{id}', [DoctorController::class, 'destroy'])->name('del_docto
 Route::view('admin/index','admin/dashboard/index')->name('admin.dashboard.index');
 Route::view('admin/speciality', 'admin/speciality/doctor-speciality');
 Route::view('admin/city', 'admin/city/create')->name('admin/city');
+Route::view('admin/ambulance', 'admin/ambulance/create')->name('admin/ambulance');
 Route::post('admin/speciality', [SpecialityController::class, 'store'])->name('admin.speciality.doctor-speciality');
 Route::view('admin/allspeciality', 'admin/speciality/all-speciality')->name('admin.speciality.all-speciality');
 Route::get('admin/allspeciality', [SpecialityController::class, 'index'])->name('admin.speciality.all-speciality');

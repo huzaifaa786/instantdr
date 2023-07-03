@@ -76,6 +76,21 @@
                 </ul>
             </div>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ambulance" aria-expanded="false" aria-controls="ui-basic">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">Ambulance</span>
+                <i class="typcn typcn-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ambulance">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin/ambulance') }}">Create Ambulance</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </li>
         
         
     

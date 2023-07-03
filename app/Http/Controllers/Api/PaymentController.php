@@ -23,7 +23,7 @@ class PaymentController extends Controller
             'amount' => $request->price * 100,
             'currency' => 'pkr',
             'customer' => $customer->id,
-            'confirmation_method' => 'manual',
+            'confirmation_method' => 'automatic',
         ]);
         $paymentIntent =
             [
