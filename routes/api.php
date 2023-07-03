@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 // routes/api.php
 Route::any('doctorall', [DoctorController::class, 'doctorAll']);
+Route::any('all/city', [DoctorController::class, 'cityAll']);
 Route::any('doctorspeciality', [DoctorController::class, 'doctorSpeciality']);
 Route::any('doctor/get', [DoctorController::class, 'getdoctor']);
 Route::any('doctor/detail', [DoctorController::class, 'doctorShow']);

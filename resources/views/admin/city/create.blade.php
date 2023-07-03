@@ -11,7 +11,9 @@
                             <label for="hospitalName" class="form-label">City Name:</label>
                             <input type="text" name="name" class="form-control" id="hospitalName" required>
                         </div>
-                       
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-user rounded-pill">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

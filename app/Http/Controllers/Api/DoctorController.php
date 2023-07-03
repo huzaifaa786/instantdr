@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\Api;
 use App\Http\Controllers\Controller;
+use App\Models\city;
 use App\Models\Doctor;
 use App\Models\Speciality;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class DoctorController extends Controller
         $speciality = Speciality::all();
         return Api::setResponse('specialities', $speciality);
     }
-    public function doctorShow( Request $request)
+    public function doctorShow(Request $request)
     {
         $doctor = Doctor::find($request->id);
 
@@ -33,7 +34,12 @@ class DoctorController extends Controller
 
     public function getdoctor(Request $request)
     {
-        $data = Doctor::where('speciality_id', $request->id) ->get();
+        $data = Doctor::where('speciality_id', $request->id)->get();
         return Api::setResponse('doctor', $data);
+    }
+    public function cityAll()
+    {
+        $city = city::all();
+        return Api::setResponse('citys', $city);
     }
 }
