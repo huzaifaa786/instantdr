@@ -21,8 +21,8 @@ class OrderController extends Controller
             'title' => 'New Appointment Booked',
             'doctor_name' => $order->doctor->name,
             'customer_name' => $order->patientname,
-            'date' => $order->date,
-            'time' => $order->time,
+            'date' => Carbon::parse($order->date)->toDateString(),
+            'time' => Carbon::parse($order->time)->format('H:i:s'),
         ];
 
         Mail::to($order->doctor->email)->send(new OrderMail($mailData));
