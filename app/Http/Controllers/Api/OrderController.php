@@ -20,7 +20,7 @@ class OrderController extends Controller
         $mailData = [
             'title' => 'New Appointment Booked',
             'doctor_name' => $order->doctor->name,
-            'customer_name' => $order->name,
+            'customer_name' => $order->patientname,
             'date' => $order->date,
             'time' => $order->time,
         ];
