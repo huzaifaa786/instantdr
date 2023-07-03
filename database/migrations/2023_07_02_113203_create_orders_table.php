@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
+            $table->foreignId('hospital_id');
+            $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');
             $table->string('patientname');
             $table->string('time');
             $table->string('date');
             $table->string('fees');
-            $table->string('hospital');
+         
             $table->timestamps();
         });
     }
