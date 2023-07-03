@@ -12,4 +12,5 @@ class OrderController extends Controller
         $data =Order::create($request->all());
         return Api::setResponse('doctor', $data);
     }
+    
 }

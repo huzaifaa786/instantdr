@@ -29,6 +29,7 @@ Route::post('admin/hospital/create', [HospitalController::class, 'store'])->name
 Route::view('admin/allhospitals','admin/hospital/allhospitals')->name('admin.hospital.allhospitals');
 Route::get('admin/allhospitals', [HospitalController::class, 'index'])->name('admin.hospital.allhospitals');
 Route::post('hospital/edit', [HospitalController::class, 'update'])->name('edit/hospital');
+Route::post('city/store', [HospitalController::class, 'city'])->name('city/store');
 Route::get('hospital/{id}', [HospitalController::class, 'destroy'])->name('delete_category');
 Route::view('admin/doctor/create','admin/doctor/createe')->name('admin.doctor.createe');
 Route::post('admin/doctor/create', [DoctorController::class, 'store'])->name('admin.doctor.create');
@@ -38,6 +39,7 @@ Route::post('doctor/edit', [DoctorController::class, 'customUpdate'])->name('edi
 Route::get('doctor/{id}', [DoctorController::class, 'destroy'])->name('del_doctor');
 Route::view('admin/index','admin/dashboard/index')->name('admin.dashboard.index');
 Route::view('admin/speciality', 'admin/speciality/doctor-speciality');
+Route::view('admin/city', 'admin/city/create')->name('admin/city');
 Route::post('admin/speciality', [SpecialityController::class, 'store'])->name('admin.speciality.doctor-speciality');
 Route::view('admin/allspeciality', 'admin/speciality/all-speciality')->name('admin.speciality.all-speciality');
 Route::get('admin/allspeciality', [SpecialityController::class, 'index'])->name('admin.speciality.all-speciality');

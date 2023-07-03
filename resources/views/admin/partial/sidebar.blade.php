@@ -7,6 +7,23 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#city" aria-expanded="false"
+                aria-controls="ui-basic">
+                <i class="typcn typcn-briefcase menu-icon"></i>
+                <span class="menu-title">City</span>
+                <i class="typcn typcn-chevron-right menu-arrow"></i>
+            </a>
+            <div class="collapse" id="city">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin/city') }}">Create
+                            City</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#hospital" aria-expanded="false" aria-controls="ui-basic">
                 <i class="typcn typcn-briefcase menu-icon"></i>
                 <span class="menu-title">Hospitals</span>
@@ -59,6 +76,9 @@
                 </ul>
             </div>
         </li>
+        
+        
+    
 
     </ul>
 

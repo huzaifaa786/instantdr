@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\city;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
 
@@ -31,5 +32,10 @@ class HospitalController extends Controller
 
         // Redirect the user back to the categories list with a success message
         return redirect()->back()->with('success', 'product deleted successfully');
+    }
+    public function city(Request $request)
+    {
+        city::create($request->all());
+        return redirect()->back();
     }
 }

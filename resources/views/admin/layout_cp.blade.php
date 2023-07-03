@@ -55,6 +55,8 @@
             <!-- Heading -->
 
             <!-- Nav Item - Pages Collapse Menu -->
+
+           
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -68,6 +70,7 @@
                     </div>
                 </div>
             </li>
+            
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -113,12 +116,12 @@
             </li> --}}
 
             <!-- Nav Item - Charts -->
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="" data-toggle="modal" data-target="#date_modal" class="months-list">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Monthly Sale</span></a>
 
-            </li> --}}
+            </li>
 
             <!-- Nav Item - Tables -->
             {{-- <li class="nav-item">
