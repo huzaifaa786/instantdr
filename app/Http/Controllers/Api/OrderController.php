@@ -27,7 +27,7 @@ class OrderController extends Controller
     {
         $doctor=Doctor::where('api_token', $request->api_token)->first();
 
-        $data = Order::where('doctor_id', $doctor)->with('hospital')->with('doctor')->with('doctor.speciality')->get();
+        $data = Order::where('doctor_id', $doctor->id)->with('hospital')->with('doctor')->with('doctor.speciality')->get();
         return Api::setResponse('order', $data);
     }
 }
