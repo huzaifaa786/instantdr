@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\Api;
 use App\Http\Controllers\Controller;
+use App\Mail\OrderMail;
 use App\Models\Doctor;
 use App\Models\Order;
 use Illuminate\Http\Request;
@@ -13,8 +14,18 @@ class OrderController extends Controller
     public function store(Request $request)
     {
 
-        $data = Order::create($request->all());
-        return Api::setResponse('order', $data);
+        $order = Order::create($request->all());
+
+        $mailData = [
+            'title' => 'New Appointment Booked',
+            'doctor_name' => $order->doctor->name,
+            'customer_name' => $order->name,
+            'date' => $order->date,
+            'time' => $order->time,
+        ];
+
+        Mail::to($order->doctor->email)->send(new OrderMail($mailData));
+        return Api::setResponse('order', $order);
     }
     public function orderget(Request $request)
     {

@@ -9,8 +9,9 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class OtpMail extends Mailable
+class OrderMail extends Mailable
 {
+   
     use Queueable, SerializesModels;
     public $otp;
     public $mailData;
@@ -22,7 +23,7 @@ class OtpMail extends Mailable
 
     public function __construct($mailData)
     {
-
+        
         $this->mailData = $mailData;
     }
 
@@ -32,7 +33,7 @@ class OtpMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Otp Mail',
+            subject: 'New appointment booked',
         );
     }
 
@@ -50,7 +51,8 @@ class OtpMail extends Mailable
     {
         return $this->from('info@attendance.klickwash.net')
             ->view('mail')
-            ->subject('One-Time Password (OTP)');
+            ->subject('New appointment booked
+            ');
     }
 
     /**

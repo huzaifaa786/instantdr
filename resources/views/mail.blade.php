@@ -20,16 +20,18 @@
         </tr>
         <tr>
             <td style="padding: 20px;">
-                <p style="margin-bottom: 20px;">Dear {{ $mailData['name'] }},</p>
-                <p style="margin-bottom: 20px;">Your OTP for verification is:</p>
-                <h1 style="margin-top: 0; margin-bottom: 20px; font-size: 32px;">{{ $mailData['otp'] }}</h1>
-                <p style="margin-bottom: 20px;">Please enter the above OTP to verify your account.</p>
+                <p style="margin-bottom: 20px;">Dear {{ $mailData['doctor_name'] }},</p>
+                <p style="margin-bottom: 20px;">Customer Name: {{$mailData['name']}}</p>
+                <p style="margin-bottom: 20px;">Appoinment time: {{$mailData['time']}}</p>
+                <p style="margin-bottom: 20px;">Appoinment date: {{$mailData['date']}}</p>
+                
+               
             </td>
         </tr>
         <tr>
             <td align="center" style="padding: 40px 0;">
                 <p style="margin-bottom: 20px;">Thanks,</p>
-                <p style="margin-bottom: 0;">1Lang</p>
+                <p style="margin-bottom: 0;">Instant Dr</p>
             </td>
         </tr>
     </table>
