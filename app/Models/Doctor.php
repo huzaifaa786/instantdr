@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 class Doctor extends Authenticatable
 {
     use HasFactory, UserMethods;
-    protected $fillable = ['city_id','speciality_id','name', 'email', 'password','fee', 'gender', 'dob', 'phone', 'address', 'qualification', 'image', 'start_time', 'end_time', 'days', 'api_token'];
+    protected $fillable = ['city_id','hospital_id','speciality_id','name', 'email', 'password','fee', 'gender', 'dob', 'phone', 'address', 'qualification', 'image', 'start_time', 'end_time', 'days', 'api_token'];
     protected $casts = [
         'days' => 'array',
     ];

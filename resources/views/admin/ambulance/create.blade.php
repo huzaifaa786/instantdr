@@ -1,11 +1,11 @@
 @extends('admin.layout')
 @section('content')
-    <h1 class="text-center">Create Hospital</h1>
+    <h1 class="text-center">Create Ambulance</h1>
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
             <div class="card shadow-lg">
                 <div class="card-body">
-                    <form method="post" action="{{route('admin.hospital.create')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('ambulance/store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="hospitalName" class="form-label">Ambulance Name:</label>
@@ -14,7 +14,7 @@
                      
                         <div class="mb-3">
                             <label for="hospitalPhone" class="form-label">Phone Number:</label>
-                            <input type="text" name="phone" class="form-control" id="hospitalPhone" required>
+                            <input type="text" name="phone" class="form-control" id="Phone" required>
                         </div>
                         <div class="mb-3">
                             <label for="hospitalImage" class="form-label">Image:</label>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambulance;
 use App\Models\city;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
@@ -36,6 +37,11 @@ class HospitalController extends Controller
     public function city(Request $request)
     {
         city::create($request->all());
+        return redirect()->back();
+    }
+    public function ambulance(Request $request)
+    {
+        Ambulance::create($request->all());
         return redirect()->back();
     }
 }

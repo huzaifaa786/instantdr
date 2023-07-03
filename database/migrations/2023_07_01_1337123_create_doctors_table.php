@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreign('speciality_id')->references('id')->on('specialities')->onDelete('cascade');
             $table->foreignId('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
+            $table->foreignId('hospital_id');
+            $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');
             $table->string('name');
             $table->string('email');
             $table->string('password');

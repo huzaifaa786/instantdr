@@ -36,6 +36,21 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="mb-3 ">
+                            <label for="speciality" class="col-md-2 col-form-label">Hospital</label>
+                            <div class="col-md-12">
+                                <select class="form-control form-select-lg mb-3 rounded" name="hospital_id"
+                                    aria-label=".form-select-lg example">
+                                    <option value="" disabled selected>Select hospital</option>
+                                    <tbody>
+                                        @foreach (App\Models\Hospital::all() as $city)
+                                        <option value="{{ $city->id }}">{{ $city->name }}
+                                        </option>
+                                    @endforeach
+                                    </tbody>
+                                </select>
+                            </div>
+                        </div>
                         <div class="mb-3">
                             <label for="doctorName" class="form-label">Doctor Name:</label>
                             <input type="text" name="name" class="form-control" id="doctorName" required>
