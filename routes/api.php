@@ -38,4 +38,5 @@ Route::any('user/get', [UserController::class, 'userget']);
 Route::any('user/passwordchange', [UserController::class, 'changeuserpassword']);
 Route::any('order/store', [OrderController::class, 'store']);
 Route::any('order/get', [OrderController::class, 'orderget']);
+Route::any('order/doctor', [OrderController::class, 'doctororder']);
 Route::any('all/ambulance', [DoctorController::class, 'ambulanceAll']);
