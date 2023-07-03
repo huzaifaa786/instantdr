@@ -8,6 +8,7 @@ use App\Mail\OrderMail;
 use App\Models\Doctor;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
