@@ -18,7 +18,7 @@ class OrderController extends Controller
     public function orderget(Request $request)
     {
 
-        $data = Order::where('user-id', $request->id)->get();
+        $data = Order::where('user_id', $request->id)->with('hospital')->with('doctor')->with('speciality')->get();
         return Api::setResponse('order', $data);
     }
 }

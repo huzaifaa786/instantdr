@@ -19,4 +19,9 @@ class Hospital extends Model
     {
         return asset($value);
     }
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }

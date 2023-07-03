@@ -28,4 +28,8 @@ class Doctor extends Authenticatable
     {
         return $this->belongsTo(Speciality::class);
     }
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
