@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\Api;
 use App\Http\Controllers\Controller;
+use App\Models\Ambulance;
 use App\Models\city;
 use App\Models\Doctor;
 use App\Models\Speciality;
@@ -41,5 +42,11 @@ class DoctorController extends Controller
     {
         $city = city::all();
         return Api::setResponse('citys', $city);
+    }
+
+    public function ambulanceAll()
+    {
+        $ambulance = Ambulance::all();
+        return Api::setResponse('ambulance', $ambulance);
     }
 }
