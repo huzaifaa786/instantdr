@@ -65,4 +65,25 @@ class HospitalController extends Controller
         // Redirect the user back to the categories list with a success message
         return redirect()->back()->with('success', 'product deleted successfully');
     }
+    public function ambulanceupdate(Request $request)
+
+    {
+        $hospital = Ambulance::find($request->id);
+        $hospital->update($request->all());
+        return redirect()->back()->with('cong', 'city edit successfully');
+    }
+
+    public function ambulanceget()
+    {
+        $hospitals = Ambulance::all();
+        return view('admin.ambulance.allambualnce', ['ambulances' => $hospitals,]);
+    }
+    public function deleteambulance($id)
+    {
+        $hospital = Ambulance::find($id);
+        $hospital->delete();
+
+        // Redirect the user back to the categories list with a success message
+        return redirect()->back()->with('success', 'product deleted successfully');
+    }
 }

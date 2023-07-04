@@ -87,8 +87,11 @@
             </a>
             <div class="collapse" id="ambulance">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
+                    <li class="nav-item">ambulance
                         <a class="nav-link" href="{{ route('admin/ambulance') }}">Create Ambulance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('all/ambulance') }}">All Ambulance</a>
                     </li>
                    
                 </ul>
