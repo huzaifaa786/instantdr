@@ -17,16 +17,16 @@ class OrderController extends Controller
     {
 
         $order = Order::create($request->all());
-        $time =    $time = Carbon::parse($order->time)->format('H:i:s');
-        $mailData = [
-            'title' => 'New Appointment Booked',
-            'doctor_name' => $order->doctor->name,
-            'customer_name' => $order->patientname,
-            'date' => Carbon::parse($order->date)->toDateString(),
-            'time' => $time,
-        ];
+        // $time =    $time = Carbon::parse($order->time)->format('H:i:s');
+        // $mailData = [
+        //     'title' => 'New Appointment Booked',
+        //     'doctor_name' => $order->doctor->name,
+        //     'customer_name' => $order->patientname,
+        //     'date' => Carbon::parse($order->date)->toDateString(),
+        //     'time' => $time,
+        // ];
 
-        Mail::to($order->doctor->email)->send(new OrderMail($mailData));
+        // Mail::to($order->doctor->email)->send(new OrderMail($mailData));
         return Api::setResponse('order', $order);
     }
     public function orderget(Request $request)

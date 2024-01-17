@@ -21,7 +21,8 @@
                             <tr>
                                 <th>id</th>
                                 <th>City name</th>
-                               
+                                <th>Edit</th>
+                                <th>Delete</th>
 
                             </tr>
                         </thead>

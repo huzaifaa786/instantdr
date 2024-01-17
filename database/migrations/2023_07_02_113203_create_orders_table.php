@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('doctor_id');
+            $table->foreignUuid('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->foreignId('hospital_id');
             $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');

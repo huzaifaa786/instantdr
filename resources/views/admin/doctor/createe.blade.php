@@ -8,7 +8,7 @@
                     <form method="post" action="{{ route('admin.doctor.createe') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 ">
-                            <label for="speciality" class="col-md-2 col-form-label">Speciality</label>
+                            <label for="speciality" class="col-md-3 col-form-label">Speciality</label>
                             <div class="col-md-12">
                                 <select class="form-control form-select-lg mb-3 rounded" name="speciality_id"
                                     aria-label=".form-select-lg example">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="mb-3 ">
-                            <label for="speciality" class="col-md-2 col-form-label">Hospital</label>
+                            <label for="speciality" class="col-md-3 col-form-label">Hospital</label>
                             <div class="col-md-12">
                                 <select class="form-control form-select-lg mb-3 rounded" name="hospital_id"
                                     aria-label=".form-select-lg example">
